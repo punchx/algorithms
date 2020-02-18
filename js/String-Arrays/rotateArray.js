@@ -8,3 +8,9 @@ let arrayRotate01 = (arr, k) => {
 }
 
 console.log(arrayRotate01([1, 2, 3, 4, 5, 6, 7], 5));
+
+let arrayRotate02 = (arr, k) => {
+  let rArray = [];
+
+  while (i < arr.length)
+}

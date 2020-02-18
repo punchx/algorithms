@@ -29,6 +29,7 @@ Array.prototype.swap = function (i1, i2) {
 }
 
 let permute = (str, start = 0) => {
+  console.log(count++);
   let arr = [];
   if (typeof str === 'string') {
     arr = str.split('');
@@ -40,9 +41,10 @@ let permute = (str, start = 0) => {
   }
   let res = [];
   for (let i = start; i < arr.length; i++) {
-    res = [...res, ...permute(arr.swap(start, i), start + 1)];
+    perms = permute(arr.swap(start, i), start + 1);
+    res = [...res, ...perms];
   }
   return res;
 }
 
-console.log(permute('xyz'));
+console.log(permute('123'));
